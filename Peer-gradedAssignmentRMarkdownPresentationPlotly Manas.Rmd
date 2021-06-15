@@ -1,0 +1,29 @@
+---
+title: "R Markdown Presentation & Plotly"
+author: "Manas Polavarapu"
+date: "6/15/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```(r)
+#This is a graph and plot that shows the relationship between sepal and petal length in the iris dataset
+```
+```{r}
+library(plotly)
+```
+```{r}
+summary(iris)
+```
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plant <- plot_ly(data = iris, x = ~Sepal.Length,y = ~Petal.Length)
+plant
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
